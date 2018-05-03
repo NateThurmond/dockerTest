@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    build: .
+    ports:
+     - "4000:80"
+    volumes:
+     - .:/app
+    image: "nginx:latest"
+  gettingstarted:
+    build: .
+    ports:
+     - "4001:81"
+    volumes:
+     - .:/app
+    image: "nate84thurmond/gettingstarted:v4"
